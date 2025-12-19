@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Water Tank / Trapping Rain Water Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Water Tank Visualizer</h1>
+      <p>Enter an array of non-negative integers (heights). Example: <code>0,4,0,0,0,6,0,6,4,0</code></p>
+    </header>
+
+    <main>
+      <div class="controls">
+        <label for="inputArray">Heights (comma separated)</label>
+        <input id="inputArray" type="text" value="0,4,0,0,0,6,0,6,4,0" />
+        <div class="row">
+          <button id="renderBtn">Render</button>
+          <button id="randomBtn">Random (10)</button>
+          <button id="clearBtn">Clear</button>
+        </div>
+        <div class="result">
+          <strong>Trapped Water:</strong> <span id="units">0</span> units
+        </div>
+
+        <div class="options">
+          <label><input id="showSvg" type="checkbox" checked /> Show SVG</label>
+          <label><input id="showTable" type="checkbox" checked /> Show Table</label>
+        </div>
+      </div>
+
+      <div class="visual">
+        <svg id="view" viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid meet"></svg>
+      </div>
+    </main>
+
+    <section class="table-section">
+      <h2>Table Visualization (grid)</h2>
+      <div id="tableOutput" class="table-output"></div>
+    </section>
+
+    <footer>
+      <small>Built with Vanilla JS • Algorithm: Two-pass (left max / right max)</small>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
